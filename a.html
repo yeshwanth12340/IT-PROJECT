@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>form</title>
+    <style>
+          body{
+            background-image: url("https://www.airlinequality.com/wp-content/uploads/2019/06/about-us-image.jpg");
+        }
+        th{
+            text-align: center;
+        }
+        table{
+            background-color: aqua;
+        }
+    </style>
+    <script>
+    function func()
+    {
+     a=document.getElementById("fname").value;
+     b=document.getElementById("pass").value;
+     c=document.getElementById("rpass").value;
+     d=document.getElementById("mobile").value;
+     e=document.getElementById("mail").value;
+
+     if(b!=c){
+        alert("enter password correctly");
+        return false;
+     }
+     if(e==""){
+        alert("enter email Id");
+        return false;
+     }
+     if(d==""){
+        alert("enter email Id");
+        return false;
+     }
+
+     if(d.length>10){
+        alert("enter only 10 digits");
+        return false;
+     }
+     if(a==""){
+        alert("enter your name");
+        return false;
+     }
+     if(isNaN(d)){
+        alert("enter only numericals");
+        return false;
+     }
+    
+    }
+    </script>
+</head>
+<body>
+    <b><h1><center>Registration form</center></h1></b>
+    <table align="center" cellpadding="10">
+        <tr>
+            <th>Enter your first name</th>
+            <td><input type="text" id="fname"></td>
+        </tr>
+        <tr>
+            <th>Enter your last name</th>
+            <td><input type="text" id="lname"></td>
+        </tr>
+        <tr>
+            <th>Enter your password</th>
+            <td><input type="password" id="pass"></td>
+        </tr>
+        <tr>
+            <th>ReEnter your password</th>
+            <td><input type="password" id="rpass"></td>
+        </tr>
+        <tr>
+            <th>Enter your email</th>
+            <td><input type="text" id="mail"></td>
+        </tr>
+        <tr>
+            <th>Enter your mobile</th>
+            <td><input type="text" id="mobile"></td>
+        </tr>
+        <tr>
+            <th>Enter your address</th>
+            <td><textarea id="add"></textarea></td>
+        </tr>
+        <tr>
+            <th>Select your gender</th>
+            <td>Male<input type="radio" id="male"> Female<input type="radio" id="female"></td>
+        </tr>
+        <tr>
+            <th>Select your date of birth</th>
+            <td><input type="date"></td>
+        </tr>
+        <tr>
+            <th>Select your Country</th>
+            <td><select>
+                <option id="s" selected>Select your country</option>
+                <option id="india">India</option>
+                <option id="pakistan">Pakistan</option>
+                <option id="sri lanka">Sri lanka</option>
+            </select></td>
+        </tr>
+        <tr>
+            <th>Upload Passport</th>
+            <td><input type="file" id="img"></td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input type="submit" id="Register" value="Register" onclick="func()">
+                <input type="reset" id="Reset" value="Reset">
+            </th>
+        </tr>
+
+    </table>
+
+</body>
+</html>

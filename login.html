@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+    <title>login</title>
+    <style>
+        body{
+            background-image: url("https://www.airlinequality.com/wp-content/uploads/2019/06/about-us-image.jpg");
+        }
+        table{
+            background-color: aqua;
+        }
+
+    </style>
+    <script>
+    function sub(){
+        a=document.getElementById("name").value;
+        b=document.getElementById("pass").value;
+        if(a==""){
+        alert("enter your name");
+        return false;
+     }
+     if(b==""){
+        alert("enter your password");
+        return false;
+     }
+
+    }
+
+    </script>
+</head>
+<body>
+    <font style="font-family: Verdana, Geneva, Tahoma, sans-serif;"><h1><center>LOGIN PAGES</center></h1></font> <br><br><br>
+    <div>
+ <table align="center" cellpadding="10">
+    <tr>
+        <th>Username</th>
+        <td><input type="text" id="name"></td>
+    </tr>
+
+    <tr>
+        <th>Password</th>
+        <td><input type="password" id="pass"></td>
+    </tr>
+    <tr>
+        <td colspan="2" align="center">
+            <input type="submit" id="sub" value="SUBMIT" onclick="sub()">
+        </td>
+    </tr>
+ </table>
+ <br><br><br>
+ <font color="red">
+  <a href="a.html"><center>create new account</center></a></font>
+  </div>
+
+</body>
+</html>
